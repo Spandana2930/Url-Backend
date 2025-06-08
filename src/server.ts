@@ -13,6 +13,9 @@ app.use(cors({
     origin:"http://localhost:3000",
     credentials:true
 }))
+app.get("/", (req, res) => {
+  res.send("Backend running ✔️");
+});
 app.use("/api/",shortUrl)
 app.listen(port,()=>{
     console.log(`server runnng on ports: ${port}`)
